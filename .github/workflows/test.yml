@@ -1,0 +1,16 @@
+name: Test
+on: [push]
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install proto
+        uses: moonrepo/setup-toolchain@v0
+        with:
+          cache: false
