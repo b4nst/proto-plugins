@@ -1,5 +1,7 @@
 # vim: set filetype=toml :
 packer = "~1.11.2"
+mockery = "~2.46.2"
 
 [plugins]
 packer = "file://./toml/packer.toml"
+mockery = "file://./toml/mockery.toml"
