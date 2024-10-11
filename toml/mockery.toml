@@ -1,0 +1,32 @@
+# A TOML plugin for proto:
+# https://moonrepo.dev/docs/proto/plugins#toml-plugin
+
+name = "mockery"
+type = "cli"
+
+[platform.linux]
+download-file = "dagger_v{version}_linux_{arch}.tar.gz"
+checksum-file = "checksum.txt"
+
+[platform.macos]
+download-file = "mockery_{version}_Darwin_{arch}.tar.gz"
+checksum-file = "checksum.txt"
+
+[platform.linux]
+download-file = "mockery_{version}_Linux_{arch}.tar.gz"
+checksum-file = "checksum.txt"
+
+[platform.windows]
+download-file = "mockery_{version}_Windows_{arch}.tar.gz"
+checksum-file = "checksum.txt"
+
+[install]
+download-url = "https://github.com/dagger/dagger/releases/download/v{version}/{download_file}"
+download-url = "https://github.com/vektra/mockery/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/dagger/dagger/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+
+[resolve]
+git-url = "https://github.com/vektra/mockery"
