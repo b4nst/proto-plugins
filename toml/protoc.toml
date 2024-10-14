@@ -16,6 +16,9 @@ download-file = "protoc-{versionMajorMinor}-win64.zip"
 [install]
 download-url = "https://github.com/protocolbuffers/protobuf/releases/download/v{versionMajorMinor}/{download_file}"
 
+[install.primary]
+exe-path = "bin/protoc"
+
 [install.arch]
 aarch64 = "aarch_64"
 
