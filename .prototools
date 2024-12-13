@@ -3,9 +3,11 @@ packer = "~1.11.2"
 mockery = "~2.46.2"
 golangci-lint = "~1.61.0"
 protoc = "~28.2"
+flux = "~2.4.0"
 
 [plugins]
 packer = "file://./toml/packer.toml"
 mockery = "file://./toml/mockery.toml"
 golangci-lint = "file://./toml/golangci-lint.toml"
 protoc = "file://./toml/protoc.toml"
+flux = "file://./toml/flux.toml"
